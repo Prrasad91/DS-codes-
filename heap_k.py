@@ -11,7 +11,6 @@ class MinHeap:
         return len(self.H)-1
     
     def __repr__(self):
-        print('__repr')
         return str(self.H[1:])
         
     def satisfies_assertions(self):
@@ -19,7 +18,7 @@ class MinHeap:
             assert self.H[i] >= self.H[i//2],  f'Min heap property fails at position {i//2}, parent elt: {self.H[i//2]}, child elt: {self.H[i]}'
     
     def min_element(self):
-        print('min')
+        #print('min')
         return self.H[1]
 
     ## bubble_up function at index
@@ -62,21 +61,28 @@ class MinHeap:
     # Use bubble_up/bubble_down function
     def insert(self, elt):
         # your code here
-        print("k = ", self.H)
-        #assert(self.size() < self.k)
+        #print("k = ", self.H)
         self.H.append(elt)
-        print("H = ", self.H)
+        #print("H = ", self.H)
         j = len(self.H)-1
-        print(j)
+        #print(j)
         
-        while (j > 1 and self.H[j] < self.H[j-1]):
+
+
+        if (j > 1 and self.H[j] < self.H[j-1]):
             # Swap A[j] and A[j-1]
-            (self.H[j], self.H[j-1]) = (self.H[j-1], self.H[j])
+            #(self.H[j], self.H[j-1]) = (self.H[j-1], self.H[j])
+            self.bubble_up(j)
             j = j -1 
+        else :
+            self.bubble_down(j)
+        print(self.H)    
+        return
+       
+     
             
         return
        
-
             
         
         

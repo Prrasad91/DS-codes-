@@ -1,6 +1,20 @@
 # DS codes 
  
-We saw how min-heaps can efficiently allow us to query the least element in a heap (array). We would like to modify minheaps in this exercise to design a data structure to maintain the least k elements for a given  𝑘≥1
+This Repository  provides an implementation of the algorithm
+
+
+
+*************
+Heap_k.py
+*************
+Heaps are binary trees for which every parent node has a value less than or equal to any of its children. This implementation uses arrays for which heap[k] <= heap[2*k+1] and heap[k] <= heap[2*k+2] for all k, counting elements from zero. For the sake of comparison, non-existing elements are considered to be infinite. The interesting property of a heap is that its smallest element is always the root, heap[0].
+
+
+
+************
+TOPK Heap.py
+************
+Saw how min-heaps can efficiently allow us to query the least element in a heap (array). We would like to modify minheaps in this exercise to design a data structure to maintain the least k elements for a given  𝑘≥1
 k≥1 with 𝑘=1
  
 being the minheap data-structure.
